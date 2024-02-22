@@ -33,4 +33,38 @@ for (int i = 0; i < courses2.Length; i++)
 
 }
 Console.WriteLine("Kod bitti");
+IndividualCustomer customer1 = new IndividualCustomer();
+customer1.Id = 1;
+customer1.NationalIdentity = "2314123";
+customer1.FirstName = "Büşra";
+customer1.LastName = "Güneş";
+customer1.CustomerNumber = "3424";
 
+IndividualCustomer customer2 = new IndividualCustomer();
+customer2.Id = 2;
+customer2.NationalIdentity = "345345";
+customer2.FirstName = "Kübra";
+customer2.LastName = "Güneş";
+customer2.CustomerNumber = "2343";
+
+CorporateCustomer customer3 = new CorporateCustomer();
+customer3.Id = 3;
+customer3.NationalIdentity = "345345";
+customer3.Name = "Kodlama.io";
+customer3.CustomerNumber = "2343";
+customer3.TaxNumber = "1234254";
+
+CorporateCustomer customer4 = new CorporateCustomer();
+customer4.Id = 4;
+customer4.NationalIdentity = "3234";
+customer4.Name = "Abc.io";
+customer4.CustomerNumber = "4535";
+customer4.TaxNumber = "123434534254";
+
+
+BaseCustomer customers = { customer1, customer2, customer3, customer4 };
+//polymorphism
+foreach (BaseCustomer customer in customers)
+{
+    Console.WriteLine(customer.CustomerNumber);
+}
