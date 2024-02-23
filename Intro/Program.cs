@@ -49,20 +49,18 @@ customer2.CustomerNumber = "2343";
 
 CorporateCustomer customer3 = new CorporateCustomer();
 customer3.Id = 3;
-customer3.NationalIdentity = "345345";
 customer3.Name = "Kodlama.io";
 customer3.CustomerNumber = "2343";
 customer3.TaxNumber = "1234254";
 
 CorporateCustomer customer4 = new CorporateCustomer();
 customer4.Id = 4;
-customer4.NationalIdentity = "3234";
 customer4.Name = "Abc.io";
 customer4.CustomerNumber = "4535";
 customer4.TaxNumber = "123434534254";
 
 
-BaseCustomer customers = { customer1, customer2, customer3, customer4 };
+BaseCustomer[] customers = { customer1, customer2, customer3, customer4 };
 //polymorphism
 foreach (BaseCustomer customer in customers)
 {
